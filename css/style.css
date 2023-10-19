@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.area {
+  width: 600px;
+  height: 400px;
+  background-color: #c3d5e0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.area img {
+  margin-left: -80px;
+}
+
+.border {
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ball {
+  width: 40px;
+  height: 40px;
+  background-color: #ff6600;
+  border-radius: 50%;
+  position: absolute;
+  animation: moveVolleyball 3s linear infinite;
+  animation-direction: alternate;
+}
+
+@keyframes moveVolleyball {
+  0%,
+  100% {
+    left: 0;
+    top: 50%;
+  }
+  25% {
+    left: 25%;
+    top: 25%;
+  }
+  50% {
+    left: 50%;
+    top: 50%;
+  }
+  75% {
+    left: 75%;
+    top: 25%;
+  }
+  100% {
+    left: 100%;
+    top: 50%;
+  }
+}
